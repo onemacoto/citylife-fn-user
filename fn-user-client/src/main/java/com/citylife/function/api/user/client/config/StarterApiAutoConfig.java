@@ -7,11 +7,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.citylife.function.api.user.client.IBaseUserClient.BaseUserClientFallbackFactory;
-import com.citylife.function.api.user.client.IModuleApiClient;
+import com.citylife.function.api.user.constant.ClientConstants;
 
 @Configuration
 @EnableFeignClients("com.citylife.function.api.user.client")
-@ConditionalOnExpression("#{!environment['spring.application.name'].equals('" + IModuleApiClient.SERVICE_NAME
+@ConditionalOnExpression("#{!environment['spring.application.name'].equals('" + ClientConstants.SERVICE_NAME
 		+ "')}")
 public class StarterApiAutoConfig {
 
