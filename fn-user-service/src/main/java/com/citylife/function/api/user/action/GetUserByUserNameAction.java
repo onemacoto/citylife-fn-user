@@ -19,7 +19,7 @@ public class GetUserByUserNameAction extends AbstractFunctionAction<RequestVO<St
   public ResultEntity<ResponseVO<BaseUser>> execute(IActionContext<RequestVO<String>> context) {
     BaseUser user = new BaseUser();
     user.setId(1L);
-    user.setPassword("$2a$06$OF00ODxoQx1G44Cja/aehuzXZ3h1mmIn.Dxo0D793d9rjszrRgnRK");
+    user.setPassword("$2a$06$0Q87VFAV5A4xhMmM1PoWMe.iAnfsS6Eohm5W.goC2TDTIwUNtOYAy");
     user.setUserName(context.getParameter().getData());
     System.out.println(context.getParameter().getData());
     user.setActive(1);
