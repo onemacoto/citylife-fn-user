@@ -19,7 +19,7 @@ public class GetUserByPhoneAction extends AbstractFunctionAction<RequestVO<Strin
     BaseUser user = new BaseUser();
     user.setId(1L);
     user.setPassword("$2a$06$0Q87VFAV5A4xhMmM1PoWMe.iAnfsS6Eohm5W.goC2TDTIwUNtOYAy");
-    user.setUserName(context.getParameter().getData());
+    user.setUserName(context.getParameter().getData() + "user");
     user.setActive(1);
     return ResultEntity.ok(ResponseVOBuilder.build(user));
   }
